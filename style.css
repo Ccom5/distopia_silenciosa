@@ -1,0 +1,136 @@
+:root {
+  --negro-carbon: #202020;
+  --gris-oscuro: #333333;
+  --azul-profundo: #2C3E50;
+  --azul-apagado: #4A607A;
+  --gris-concreto: #7F8C8D;
+  --gris-claro: #BDC3C7;
+  --blanco-roto: #F0F0F0;
+  --crema: #EBEBEB;
+  --verde-musgo: #7D8B78;
+  --verde-oscuro: #5B6A5B;
+  --naranja-oxido: #B85B00;
+  --naranja-alerta: #D35400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--negro-carbon);
+  color: var(--blanco-roto);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--gris-oscuro);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--azul-apagado);
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: var(--crema);
+}
+
+nav a {
+  color: var(--blanco-roto);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+nav a:hover {
+  color: var(--naranja-alerta);
+}
+
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--azul-profundo), var(--gris-oscuro));
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--crema);
+}
+
+.section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid var(--gris-concreto);
+}
+
+.glosario .terminos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.termino h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--verde-musgo);
+}
+
+.fragmentos blockquote {
+  font-style: italic;
+  color: var(--gris-claro);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.glitched-text {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--naranja-oxido);
+}
+
+.glitch-line {
+  position: relative;
+  color: var(--naranja-alerta);
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  20% { text-shadow: -2px 0 blue; }
+  40% { text-shadow: 1px 1px green; }
+  60% { text-shadow: -1px -1px magenta; }
+  80% { text-shadow: 2px 2px cyan; }
+  100% { text-shadow: 0 0 transparent; }
+}
+
+footer {
+  background: var(--gris-oscuro);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--gris-claro);
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--verde-musgo);
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--naranja-oxido);
+}
